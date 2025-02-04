@@ -167,12 +167,20 @@ public class Home extends JFrame implements ActionListener {
 		public void actionPerformed(ActionEvent ae) 
 		{
 
+            if(ae.getSource()==b4) //back
+			{
+				Planes f = new Planes();
+				f.setVisible(true);
+                this.setVisible(false);
+			}
+            
             if(ae.getSource()==b1) //back
 			{
 				LogIn f = new LogIn();
 				f.setVisible(true);
                 this.setVisible(false);
 			}
+            
             if(ae.getSource()==b2) //exit
 			{
 				// this.setVisible(false);

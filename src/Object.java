@@ -2,7 +2,7 @@ package src;
 import java.sql.*;
  
 public class Object {
- 
+
     public static void main(String[] args) {
        try {
             Class.forName("com.mysql.cj.jdbc.Driver");   // register jdbc driver of mysql,Driver Registration
@@ -17,6 +17,8 @@ public class Object {
                 System.out.println("ID=" + rs.getInt(1) );
                 System.out.println("Name=" + rs.getString(2) );
                 System.out.println("section=" + rs.getString(3) );
+
+                System.out.println(rs.getRow());
  
             }
            // Connection.close(); //This line is commented out, which means the connection is not being closed after use. This could lead to resource leaks (open database connections that aren't cleaned up).
